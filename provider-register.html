@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Provider Registration | UniVea</title>
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <style>
+        .services-container {
+            margin: 25px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .checkbox-box {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        
+        .service-name-box {
+            flex: 1;
+            padding: 10px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        
+        .service-item:hover .checkbox-box,
+        .service-item:hover .service-name-box {
+            background: #edf2ff;
+            border-color: #667eea;
+        }
+        
+        .service-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .service-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: normal;
+            color: #333;
+            width: 100%;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Service Provider Registration</h1>
+        <p>Join UniVea and offer your services to students</p>
+    </header>
+
+    <main>
+        <form id="registrationForm">
+
+            <label class="required-field">Full Name</label><br>
+            <input type="text" placeholder="Enter your full name" required><br><br>
+
+            <label class="required-field">Phone Number</label><br>
+            <input type="tel" placeholder="Enter phone number" required><br><br>
+
+            <label class="required-field">Address</label><br>
+            <textarea placeholder="Enter your address" rows="3" required></textarea><br><br>
+
+            <label class="required-field">Aadhaar ID</label><br>
+            <input type="text" placeholder="Enter Aadhaar number" required><br><br>
+
+            <label class="required-field">Email</label><br>
+            <input type="email" placeholder="Enter email address" required><br><br>
+
+            <label class="required-field">Password</label><br>
+            <input type="password" placeholder="Create a password" required><br><br>
+
+            <div class="services-container">
+                <label class="required-field">Select Services You Provide</label><br>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="hostel" name="services" value="Hostel / PG" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="hostel">Hostel / PG</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="mess" name="services" value="Mess / Tiffin Service" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="mess">Mess / Tiffin Service</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="gym" name="services" value="Gym / Fitness Center" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="gym">Gym / Fitness Center</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="medical" name="services" value="Medical Store" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="medical">Medical Store</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="hospital" name="services" value="Clinic / Hospital" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="hospital">Clinic / Hospital</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="laundry" name="services" value="Laundry Service" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="laundry">Laundry Service</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="vegetable" name="services" value="Vegetable / Fruit Shop" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="vegetable">Vegetable / Fruit Shop</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="grocery" name="services" value="Grocery Store" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="grocery">Grocery Store</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="xerox" name="services" value="Printing / Xerox" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="xerox">Printing / Xerox</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="tutor" name="services" value="Private Tutor" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="tutor">Private Tutor</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="stationery" name="services" value="Stationery Shop" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="stationery">Stationery Shop</label>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="transport" name="services" value="Transport Service" required>
+                        </div>
+                        <div class="service-name-box">
+                            <label for="transport">Transport Service</label>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <p>
+            Already registered?
+            <a href="provider-login.html">Login here</a>
+        </p>
+    </main>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const checkboxes = document.querySelectorAll('input[name="services"]');
+            let atLeastOneChecked = false;
+            
+            for (let checkbox of checkboxes) {
+                if (checkbox.checked) {
+                    atLeastOneChecked = true;
+                    break;
+                }
+            }
+            
+            if (!atLeastOneChecked) {
+                event.preventDefault();
+                alert('Please select at least one service you provide.');
+            }
+        });
+    </script>
+</body>
+</html>

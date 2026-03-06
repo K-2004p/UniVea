@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard | UniVea</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/sdashboard.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="nav-logo">
+            <img src="../assets/images/UniVea.png" alt="UniVea Logo">
+        </div>
+
+        <div class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="../pages/services.html">Services</a>
+            <a href="../pages/bookings.html">My Bookings</a>
+            <a href="../pages/contact.html">Help</a>
+        </div>
+
+        <div class="nav-auth">
+            <a href="../student/student-logout.html">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<main class="dashboard-container">
+    <!-- Welcome Header -->
+    <div class="dashboard-header">
+        <h1>Student Dashboard</h1>
+        <p>Find and manage services for your campus life</p>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="stats-overview">
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <div class="stat-number">0</div>
+            <div class="stat-label">Active Services</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📅</div>
+            <div class="stat-number">0</div>
+            <div class="stat-label">Upcoming Bookings</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-number">0</div>
+            <div class="stat-label">Reviews Given</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-number">$0</div>
+            <div class="stat-label">Total Spent</div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Grid -->
+    <div class="dashboard-grid">
+        <!-- Services Section -->
+        <div class="services-section">
+            <div class="section-header">
+                <h2>Available Services</h2>
+                <input type="text" class="search-box" placeholder="Search services...">
+            </div>
+
+            <div class="service-categories">
+                <button class="category-btn active">All</button>
+                <button class="category-btn">Accommodation</button>
+                <button class="category-btn">Food</button>
+                <button class="category-btn">Health</button>
+                <button class="category-btn">Study</button>
+            </div>
+
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Student Hostel</h3>
+                    <p>Affordable accommodation near campus</p>
+                    <button class="btn-primary btn-small">View Details</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Campus Mess</h3>
+                    <p>Daily meal plans for students</p>
+                    <button class="btn-primary btn-small">View Details</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💪</div>
+                    <h3>University Gym</h3>
+                    <p>Fitness center with student rates</p>
+                    <button class="btn-primary btn-small">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Quick Actions -->
+            <div class="quick-actions-card">
+                <h3>Quick Actions</h3>
+                <div class="quick-actions-list">
+                    <a href="#" class="quick-action">
+                        <div class="action-icon">📝</div>
+                        <span>Book Service</span>
+                    </a>
+                    <a href="#" class="quick-action">
+                        <div class="action-icon">📅</div>
+                        <span>View Schedule</span>
+                    </a>
+                    <a href="#" class="quick-action">
+                        <div class="action-icon">💬</div>
+                        <span>Messages</span>
+                    </a>
+                    <a href="#" class="quick-action">
+                        <div class="action-icon">⭐</div>
+                        <span>Write Review</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">📝</div>
+                        <div class="activity-content">
+                            <p>New booking created</p>
+                            <div class="activity-time">Recently</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">✅</div>
+                        <div class="activity-content">
+                            <p>Service confirmed</p>
+                            <div class="activity-time">Recently</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">💬</div>
+                        <div class="activity-content">
+                            <p>New message received</p>
+                            <div class="activity-time">Recently</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Bookings -->
+    <div class="upcoming-bookings">
+        <h2>Recent Bookings</h2>
+        <div class="booking-list">
+            <div class="booking-item">
+                <div class="booking-header">
+                    <div class="booking-service">Student Hostel</div>
+                    <div class="booking-date">Recently booked</div>
+                </div>
+                <div class="booking-details">Monthly accommodation plan</div>
+                <div class="booking-actions">
+                    <button class="btn-primary btn-small">View Details</button>
+                    <button class="btn-outline btn-small">Contact</button>
+                </div>
+            </div>
+
+            <div class="booking-item">
+                <div class="booking-header">
+                    <div class="booking-service">Campus Mess</div>
+                    <div class="booking-date">Active</div>
+                </div>
+                <div class="booking-details">Daily meal subscription</div>
+                <div class="booking-actions">
+                    <button class="btn-primary btn-small">View Details</button>
+                    <button class="btn-outline btn-small">Modify</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 UniVea. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

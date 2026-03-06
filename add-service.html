@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Service | UniVea</title>
+    <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+<body>
+
+    <header>
+        <h1>Add New Service</h1>
+    </header>
+
+    <main>
+        <form>
+            <label>Service Name</label><br>
+            <input type="text" placeholder="Enter service name" required><br><br>
+
+            <label>Service Category</label><br>
+            <select required>
+                <option value="">Select category</option>
+                <option value="hostel">Hostel / PG</option>
+                <option value="mess">Mess / Tiffin Service</option>
+                <option value="gym">Gym / Fitness Center</option>
+                <option value="medical">Medical Store</option>
+                <option value="hospital">Clinic / Hospital</option>
+                <option value="laundry">Laundry Service</option>
+                <option value="vegetable">Vegetable / Fruit Shop</option>
+                <option value="grocery">Grocery Store</option>
+                <option value="xerox">Printing / Xerox</option>
+                <option value="tutor">Private Tutor</option>
+                <option value="stationery">Stationery Shop</option>
+                <option value="transport">Transport Service</option>
+            </select><br><br>
+
+            <label>Description</label><br>
+            <textarea placeholder="Describe your service in detail" rows="4" required></textarea><br><br>
+
+            <label>Location</label><br>
+            <textarea placeholder="Enter service location/address" required></textarea><br><br>
+
+            <label>Price (per month/unit)</label><br>
+            <input type="number" placeholder="Enter price" required><br><br>
+
+            <label>Contact Phone</label><br>
+            <input type="tel" placeholder="Enter contact number" required><br><br>
+
+            <button type="submit">Add Service</button>
+        </form>
+
+        <p>
+            <a href="provider-dashboard.html">← Back to Dashboard</a>
+        </p>
+    </main>
+
+</body>
+</html>

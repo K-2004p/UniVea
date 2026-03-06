@@ -1,0 +1,264 @@
+/* =====================
+   UniVea Compact Footer
+   Clean, Minimal, Professional
+===================== */
+
+:root {
+    --footer-bg: #ffffff;
+    --footer-text-main: #2d2d3a;
+    --footer-text-muted: #646475;
+    --footer-accent: #8b6cf6;
+    --footer-border: rgba(139, 108, 246, 0.1);
+    --footer-shadow: 0 -5px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* =====================
+   Main Footer
+===================== */
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-main);
+    margin-top: 40px;
+    border-top: 1px solid var(--footer-border);
+    box-shadow: var(--footer-shadow);
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 25px 20px;
+}
+
+/* =====================
+   Grid Layout
+===================== */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+    gap: 40px;
+    margin-bottom: 30px;
+    align-items: start;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================
+   Logo Section
+===================== */
+
+.brand-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    height: 150px;
+    width: auto;
+}
+
+/* =====================
+   Section Titles
+===================== */
+
+.footer-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* =====================
+   Quick Links & Support Links - ONLY UNDERLINE (NO COLOR CHANGE)
+===================== */
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 10px;
+}
+
+.footer-links-list a {
+    color: var(--footer-text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: relative;
+    transition: none; /* Remove all transitions */
+}
+
+/* Underline animation only - no color change */
+.footer-links-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background: var(--footer-accent);
+    transition: width 0.3s ease;
+}
+
+.footer-links-list a:hover::after {
+    width: 100%;
+}
+
+/* Keep original color on hover - NO CHANGE */
+.footer-links-list a:hover {
+    color: var(--footer-text-muted);
+}
+
+/* =====================
+   Contact Section
+===================== */
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: var(--footer-text-muted);
+    font-size: 0.9rem;
+}
+
+.contact-info svg {
+    color: var(--footer-accent);
+    width: 16px;
+    height: 16px;
+}
+
+/* =====================
+   Social Icons - WITH HOVER EFFECTS
+===================== */
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: #f5f5f9;
+    border-radius: 8px;
+    color: var(--footer-accent);
+    transition: all 0.25s ease; /* Keep transitions for social icons */
+}
+
+/* Social icons hover effects - KEEP THESE */
+.social-icon:hover {
+    background: var(--footer-accent);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.social-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* =====================
+   Footer Bottom
+===================== */
+
+.footer-bottom {
+    border-top: 1px solid var(--footer-border);
+    padding-top: 18px;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: var(--footer-text-muted);
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Bottom links - ONLY UNDERLINE (NO COLOR CHANGE) */
+.footer-bottom-links a {
+    color: var(--footer-text-muted);
+    font-size: 0.8rem;
+    text-decoration: none;
+    position: relative;
+    transition: none; /* Remove all transitions */
+}
+
+/* Underline animation only */
+.footer-bottom-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    transition: width 0.3s;
+}
+
+.footer-bottom-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================
+   Responsive
+===================== */
+
+@media (max-width: 992px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brand-section {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        height: 80px;
+    }
+}

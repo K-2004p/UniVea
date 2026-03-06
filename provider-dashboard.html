@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Provider Dashboard | UniVea</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/sdashboard.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="nav-logo">
+            <img src="../assets/images/UniVea.png" alt="UniVea Logo">
+        </div>
+
+        <div class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="../pages/for-providers.html">For Providers</a>
+            <a href="../pages/contact.html">Support</a>
+        </div>
+
+        <div class="nav-auth">
+            <a href="../provider/provider-logout.html">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<main class="dashboard-container">
+    <div class="dashboard-header provider-header">
+        <h1>Welcome, Service Provider 👋</h1>
+        <p>Manage your services and reach more students.</p>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="stats-overview">
+        <div class="stat-card">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Active Services</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Pending Requests</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Completed Jobs</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Student Rating</div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+        <h3>Quick Actions</h3>
+        <div class="action-buttons">
+            <a href="../provider/add-service.html" class="btn-primary">
+                <span>➕</span> Add New Service
+            </a>
+            <a href="../provider/edit-service.html" class="btn-secondary">
+                <span>✏️</span> Edit Services
+            </a>
+            <a href="#" class="btn-secondary">
+                <span>📊</span> View Analytics
+            </a>
+        </div>
+    </div>
+
+    <!-- Dashboard Grid -->
+    <div class="dashboard-grid provider-grid">
+        <!-- Services Section -->
+        <section class="dashboard-card">
+            <h2>My Services</h2>
+            <p>View and manage the services you provide to students</p>
+            <ul>
+                <li>Add new services to your profile</li>
+                <li>Update service details and pricing</li>
+                <li>Manage service availability</li>
+            </ul>
+            <div class="card-actions">
+                <a href="../provider/add-service.html" class="btn-primary">Add Service</a>
+                <a href="../provider/edit-service.html" class="btn-secondary">Edit Services</a>
+            </div>
+        </section>
+
+        <!-- Service Requests -->
+        <section class="dashboard-card">
+            <h2>Student Requests</h2>
+            <p>Manage incoming service requests from students</p>
+            <ul>
+                <li>View new student inquiries</li>
+                <li>Accept or reject service requests</li>
+                <li>Schedule appointments</li>
+                <li>Send quotes and offers</li>
+            </ul>
+            <div class="card-actions">
+                <a href="#" class="btn-primary">View Requests</a>
+            </div>
+        </section>
+
+        <!-- Service History -->
+        <section class="dashboard-card">
+            <h2>Service History</h2>
+            <p>Track your completed services and interactions</p>
+            <ul>
+                <li>Completed services</li>
+                <li>Previous student interactions</li>
+                <li>Reviews and ratings</li>
+                <li>Revenue history</li>
+            </ul>
+            <div class="card-actions">
+                <a href="#" class="btn-primary">View History</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section class="dashboard-card">
+            <h2>My Profile</h2>
+            <p>Manage your provider account and information</p>
+            <ul>
+                <li>Personal details</li>
+                <li>Contact information</li>
+                <li>Registered services</li>
+                <li>Business hours</li>
+            </ul>
+            <div class="card-actions">
+                <a href="#" class="btn-primary">View / Edit Profile</a>
+            </div>
+        </section>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 UniVea. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

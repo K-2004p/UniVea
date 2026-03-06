@@ -1,0 +1,144 @@
+/* =====================
+   UniVea Color Palette
+===================== */
+:root {
+    --primary-purple: #8B6CF6;
+    --secondary-violet: #B9A7FF;
+    --deep-indigo: #5A4AE3;
+    --light-lavender: #F3F0FF;
+    --text-dark: #2E2E3A;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--light-lavender);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================
+   Header / Navbar
+===================== */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo img {
+    height: 130px; 
+    cursor: pointer;
+}
+
+/* Menu (Center) */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-purple);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Auth (Right) */
+.nav-auth {
+    display: flex;
+    gap: 15px;
+}
+
+/* Common auth link style */
+.nav-auth a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Login - normal state (no button) */
+.nav-auth a:first-child {
+    color: var(--primary-purple);
+    background: transparent;
+}
+
+/* Login - button appears on hover */
+.nav-auth a:first-child:hover {
+    background-color: var(--primary-purple);
+    color: var(--white);
+}
+
+/* Register - always button */
+.nav-auth a:last-child {
+    color: var(--primary-purple);
+    background: transparent;
+}
+
+.nav-auth a:last-child:hover {
+    background-color: var(--primary-purple);
+    color: var(--white);
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 25px;
+    text-align: center;
+}
+
+main h1 {
+    color: var(--deep-indigo);
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+footer {
+    background-color: var(--white);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #eee;
+}

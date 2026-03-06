@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniVea | Student Services Platform</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav>
+
+            <!-- Logo : Top Left -->
+            <div class="nav-logo">
+                <img src="assets/images/UniVea.png" alt="UniVea Logo">
+            </div>
+
+            <!-- Menu : Top Center -->
+            <div class="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/services.html">Services</a>
+                <a href="pages/for-providers.html">For Providers</a>
+                <a href="pages/about.html">About Us</a>
+                <a href="pages/contact.html">Contact Us</a>
+            </div>
+
+            <!-- Auth : Top Right -->
+            <div class="nav-auth">
+                <a href="student/student-register.html">Student Register</a>
+                <a href="provider/provider-register.html">Provider Register</a>
+            </div>
+
+             <div class="nav-account">
+                <a href="account/dashboard.html" class="account-btn"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Account
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="home-page">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to <span class="highlight">UniVea</span></h1>
+                <p class="hero-subtitle">Connecting Students with Trusted Service Providers Near Your College</p>
+                <p class="hero-description">Find the best Hostels, Mess, Gyms, Medical Stores and more - all verified and student-friendly</p>
+                <div class="hero-buttons">
+                    <a href="pages/services.html" class="btn-primary">Explore Services</a>
+                    <a href="provider/provider-register.html" class="btn-secondary">List Your Business</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=750&q=80" alt="Students collaborating" loading="lazy">
+            </div>
+        </section>
+
+<!-- Search Bar Section -->
+<section class="search-section">
+    <div class="search-content">
+        <h2>Find Services Near You</h2>
+        <p>Search for hostels, mess, gyms, medical stores and more</p>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for services, providers, or location...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="popular-searches">
+            <span class="popular-label">Popular:</span>
+            <div class="popular-tags">
+                <a href="#" class="popular-tag">Hostel near me</a>
+                <a href="#" class="popular-tag">Tiffin service</a>
+                <a href="#" class="popular-tag">Gym membership</a>
+                <a href="#" class="popular-tag">Medical store</a>
+                <a href="#" class="popular-tag">Private tutor</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="section-header">
+                <h2>Services Near You</h2>
+                <div class="divider"></div>
+                <p class="section-description">Everything a student needs, just around the corner</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Hostel / PG -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hostel/PG" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Hostel / PG</h3>
+                        <p>Comfortable accommodations with student-friendly amenities</p>
+                        <a href="pages/services.html#hostel" class="service-link">Find near me →</a>
+                    </div>
+                </div>
+
+                <!-- Mess / Tiffin Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mess/Tiffin" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mess / Tiffin Service</h3>
+                        <p>Healthy and affordable meal plans for students</p>
+                        <a href="pages/services.html#mess" class="service-link">Find near me →</a>
+                    </div>
+                </div>
+
+                <!-- Gym / Fitness Center -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gym/Fitness" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Gym / Fitness Center</h3>
+                        <p>Stay fit with student-discounted memberships</p>
+                        <a href="pages/services.html#gym" class="service-link">Find near me →</a>
+                    </div>
+                </div>
+
+                <!-- Medical Store -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Medical Store" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Medical Store</h3>
+                        <p>24/7 pharmacies with student discounts</p>
+                        <a href="pages/services.html#medical" class="service-link">Find near me →</a>
+                    </div>
+                </div>
+
+                <!-- Clinic / Hospital -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Clinic/Hospital" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Clinic / Hospital</h3>
+                        <p>Quality healthcare services near your campus</p>
+                        <a href="pages/services.html#clinic" class="service-link">Find near me →</a>
+                    </div>
+                </div>
+
+                <!-- Laundry Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Laundry Service" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Laundry Service</h3>
+                        <p>Convenient washing and dry-cleaning services</p>
+                        <a href="pages/services.html#laundry" class="service-link">Find near me →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <a href="pages/services.html" class="btn-outline">View All Services</a>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works">
+            <div class="section-header">
+                <h2>How UniVea Works</h2>
+                <div class="divider"></div>
+                <p class="section-description">Three simple steps to find what you need</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span>1</span>
+                    </div>
+                    <h3>Search</h3>
+                    <p>Look for services near your college using our smart search</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span>2</span>
+                    </div>
+                    <h3>Compare</h3>
+                    <p>Check reviews, prices, and verify provider credentials</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">
+                        <span>3</span>
+                    </div>
+                    <h3>Connect</h3>
+                    <p>Get in touch and enjoy student-exclusive deals</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us">
+            <div class="section-header">
+                <h2>Why Students Love UniVea</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Verified Providers</h3>
+                    <p>All service providers are background verified for your safety</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Student Discounts</h3>
+                    <p>Exclusive deals and offers only for students</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Real Reviews</h3>
+                    <p>Genuine feedback from fellow students</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Nearby Only</h3>
+                    <p>Services located within 5km of your college</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Are You a Service Provider?</h2>
+                <p>Join UniVea and reach thousands of students near you</p>
+                <div class="cta-buttons">
+                    <a href="provider/provider-register.html" class="btn-primary btn-large">List Your Business</a>
+                    <a href="pages/for-providers.html" class="btn-secondary btn-large">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            document.querySelector('.nav-auth').classList.toggle('active');
+            document.querySelector('.nav-account').classList.toggle('active');
+        });
+    </script>
+
+    <!-- Footer Load Script - Fixed -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch("pages/footer.html")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Footer file not found');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById("footer-placeholder").innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading footer:', error);
+                    // Simple fallback footer
+                    document.getElementById("footer-placeholder").innerHTML = `
+                        <footer style="background: linear-gradient(135deg, #5A4AE3 0%, #8B6CF6 100%); color: white; text-align: center; padding: 20px; margin-top: 40px;">
+                            <p>© 2026 UniVea. All rights reserved.</p>
+                        </footer>
+                    `;
+                });
+        });
+    </script>
+
+</body>
+</html>

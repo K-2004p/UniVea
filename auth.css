@@ -1,0 +1,119 @@
+:root {
+    --primary-purple: #8B6CF6;
+    --deep-indigo: #5A4AE3;
+    --light-lavender: #F3F0FF;
+    --white: #FFFFFF;
+    --text-dark: #2E2E3A;
+}
+
+body {
+    background-color: var(--light-lavender);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    color: var(--deep-indigo);
+}
+
+main {
+    width: 100%;
+    max-width: 600px;              /* slightly broader */
+    background-color: var(--white);
+    margin: auto;
+    padding: 32px;                 /* a bit more breathing room */
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;            /* subtle spacing */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 10px;           /* very slight increase */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    background-color: var(--primary-purple);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--deep-indigo);
+}
+
+p {
+    text-align: center;
+    margin-top: 18px;
+}
+
+a {
+    color: var(--primary-purple);
+    text-decoration: none;
+}
+/* Checkbox styling for registration forms */
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-purple);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.checkbox-container label {
+    font-weight: normal;
+    color: #555;
+    line-height: 1.0;
+    font-size: 0.95rem;
+}
+
+.checkbox-container label a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.checkbox-container label a:hover {
+    text-decoration: underline;
+}
+
+textarea {
+    font-family: inherit;
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Select dropdown styling */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235A4AE3' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+    padding-right: 35px;
+    cursor: pointer;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | UniVea</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="nav-logo">
+            <img src="../assets/images/UniVea.png" alt="UniVea Logo">
+        </div>
+
+        <div class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="../pages/services.html">Services</a>
+            <a href="../pages/for-providers.html">For Providers</a>
+            <a href="../pages/about.html">About Us</a>
+            <a href="../pages/contact.html" class="active">Contact</a>
+        </div>
+
+        <div class="nav-auth">
+            <a href="../student/student-login.html">Student Login</a>
+            <a href="../provider/provider-login.html">Provider Login</a>
+        </div>
+    </nav>
+</header>
+
+<main class="contact-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Contact Us</h1>
+        <p class="hero-subtitle">Get in touch with our team. We're here to help!</p>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info-section">
+        <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h3>Our Location</h3>
+            <p>Laxmi Nagar, Ravet</p>
+            <p>Pune, Maharashtra - 123456</p>
+        </div>
+        
+        <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h3>Email Us</h3>
+            <p>support@univea.com</p>
+            <p>help@univea.com</p>
+        </div>
+        
+        <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>Call Us</h3>
+            <p>+91 9356910947</p>
+            <p>Mon-Fri: 9AM-6PM</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="form-header">
+            <h2>Send us a Message</h2>
+            <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+        </div>
+        
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" placeholder="What is this regarding?" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="category">Category *</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="student">Student Support</option>
+                    <option value="provider">Provider Support</option>
+                    <option value="technical">Technical Issue</option>
+                    <option value="feedback">Feedback/Suggestion</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea id="message" placeholder="Type your message here..." rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do I register as a student?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Click on "Student Register" in the top navigation or go to the student registration page. Fill in your details and verify your email to get started.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do providers get verified?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>After registration, our team reviews your application and documents. You'll receive an email confirmation once verified.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What if I forget my password?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Click "Forgot Password" on the login page. Enter your email and follow the instructions to reset your password.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How long does support take to respond?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We typically respond within 24 hours on weekdays. For urgent issues, please call our support number.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 UniVea. All rights reserved. | We're here to help you!</p>
+</footer>
+
+<script>
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const toggle = question.querySelector('.faq-toggle');
+            
+            answer.classList.toggle('active');
+            toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+        });
+    });
+</script>
+
+</body>
+</html>
