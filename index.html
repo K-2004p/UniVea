@@ -4,39 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniVea | Student Services Platform</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- Vanta.js and Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Vanta Background Container -->
+    <div id="vanta-bg"></div>
 
     <!-- Header / Navbar -->
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1000">
         <nav>
-
             <!-- Logo : Top Left -->
             <div class="nav-logo">
-                <img src="assets/images/UniVea.png" alt="UniVea Logo">
+                <img src="UniVea.png" alt="UniVea Logo">
             </div>
 
             <!-- Menu : Top Center -->
             <div class="nav-menu">
                 <a href="index.html" class="active">Home</a>
-                <a href="pages/services.html">Services</a>
-                <a href="pages/for-providers.html">For Providers</a>
-                <a href="pages/about.html">About Us</a>
-                <a href="pages/contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+                <a href="for-providers.html">For Providers</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
             </div>
 
             <!-- Auth : Top Right -->
             <div class="nav-auth">
-                <a href="student/student-register.html">Student Register</a>
-                <a href="provider/provider-register.html">Provider Register</a>
+                <a href="student-register.html">Student Register</a>
+                <a href="provider-register.html">Provider Register</a>
             </div>
 
-             <div class="nav-account">
-                <a href="account/dashboard.html" class="account-btn"> 
+            <div class="nav-account">
+                <a href="#" class="account-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                         <circle cx="12" cy="7" r="4"></circle>
@@ -51,53 +57,152 @@
                 <span></span>
                 <span></span>
             </div>
-
         </nav>
     </header>
 
     <!-- Main Content -->
     <main class="home-page">
-        
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
             <div class="hero-content">
                 <h1>Welcome to <span class="highlight">UniVea</span></h1>
                 <p class="hero-subtitle">Connecting Students with Trusted Service Providers Near Your College</p>
                 <p class="hero-description">Find the best Hostels, Mess, Gyms, Medical Stores and more - all verified and student-friendly</p>
                 <div class="hero-buttons">
-                    <a href="pages/services.html" class="btn-primary">Explore Services</a>
-                    <a href="provider/provider-register.html" class="btn-secondary">List Your Business</a>
+                    <a href="services.html" class="btn-primary">Explore Services</a>
+                    <a href="provider-register.html" class="btn-secondary">List Your Business</a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                 <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=750&q=80" alt="Students collaborating" loading="lazy">
             </div>
         </section>
 
-<!-- Search Bar Section -->
-<section class="search-section">
-    <div class="search-content">
-        <h2>Find Services Near You</h2>
-        <p>Search for hostels, mess, gyms, medical stores and more</p>
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search for services, providers, or location...">
-            <button class="search-button">Search</button>
-        </div>
-        <div class="popular-searches">
-            <span class="popular-label">Popular:</span>
-            <div class="popular-tags">
-                <a href="#" class="popular-tag">Hostel near me</a>
-                <a href="#" class="popular-tag">Tiffin service</a>
-                <a href="#" class="popular-tag">Gym membership</a>
-                <a href="#" class="popular-tag">Medical store</a>
-                <a href="#" class="popular-tag">Private tutor</a>
+        <!-- Search Bar Section -->
+        <section class="search-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="search-content">
+                <h2>Find Services Near You</h2>
+                <p>Search for hostels, mess, gyms, medical stores and more</p>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search for services, providers, or location...">
+                    <button class="search-button">Search</button>
+                </div>
+                <div class="popular-searches">
+                    <span class="popular-label">Popular:</span>
+                    <div class="popular-tags">
+                        <a href="#" class="popular-tag">Hostel near me</a>
+                        <a href="#" class="popular-tag">Tiffin service</a>
+                        <a href="#" class="popular-tag">Gym membership</a>
+                        <a href="#" class="popular-tag">Medical store</a>
+                        <a href="#" class="popular-tag">Private tutor</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Services Section -->
-        <section class="services-section">
+        <section class="services-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <div class="services-header">
+                <h2>Popular Services</h2>
+                <p>Discover trusted services near your college campus</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-icon">🏠</div>
+                    <h3>Hostels</h3>
+                    <p>Find comfortable and affordable accommodation near your college</p>
+                    <a href="#" class="service-link">View Hostels →</a>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Mess Services</h3>
+                    <p>Quality food services with student-friendly pricing</p>
+                    <a href="#" class="service-link">View Mess →</a>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-icon">💪</div>
+                    <h3>Gyms</h3>
+                    <p>Fitness centers with modern equipment and expert trainers</p>
+                    <a href="#" class="service-link">View Gyms →</a>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-icon">🏥</div>
+                    <h3>Medical Stores</h3>
+                    <p>24/7 pharmacies with genuine medicines and healthcare products</p>
+                    <a href="#" class="service-link">View Stores →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <div class="stats-container">
+                <div class="stat-item" data-aos="count-up" data-count="5000">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Happy Students</div>
+                </div>
+                <div class="stat-item" data-aos="count-up" data-count="200">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Service Providers</div>
+                </div>
+                <div class="stat-item" data-aos="count-up" data-count="50">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Colleges Covered</div>
+                </div>
+                <div class="stat-item" data-aos="count-up" data-count="98">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <div class="cta-content">
+                <h2>Are You a Service Provider?</h2>
+                <p>Join UniVea and reach thousands of students near you</p>
+                <div class="cta-buttons">
+                    <a href="provider-register.html" class="btn-primary btn-large">List Your Business</a>
+                    <a href="for-providers.html" class="btn-secondary btn-large">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+        <button id="toggle-animations" class="control-btn" title="Toggle Animations">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m16.24-3.76l-4.24 4.24m-6-6L2.76 6.24m16.24 11.52l-4.24-4.24m-6 6L2.76 17.76"/>
+            </svg>
+        </button>
+        <button id="toggle-theme" class="control-btn" title="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+        <div class="loading-text">Loading UniVea...</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
             <div class="section-header">
                 <h2>Services Near You</h2>
                 <div class="divider"></div>

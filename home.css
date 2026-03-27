@@ -12,10 +12,53 @@
 }
 
 /* Home Page Layout */
+#vanta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
 .home-page {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Global Buttons for Homepage */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--deep-indigo) 100%);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(139, 108, 246, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 108, 246, 0.4);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--deep-indigo);
+    border: 2px solid var(--deep-indigo);
+}
+
+.btn-secondary:hover {
+    background: var(--light-lavender);
+    transform: translateY(-3px);
 }
 
 /* Hero Section */
@@ -32,7 +75,8 @@
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 700;
     color: var(--deep-indigo);
     margin-bottom: 20px;
     line-height: 1.2;
@@ -71,6 +115,7 @@
 .hero-buttons {
     display: flex;
     gap: 15px;
+    margin-top: 10px;
 }
 
 .hero-image {
@@ -328,16 +373,19 @@
 
 .service-card {
     background: var(--white);
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid rgba(139, 108, 246, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(139, 108, 246, 0.25);
+    border-color: rgba(139, 108, 246, 0.3);
 }
 
 .service-image {
@@ -432,14 +480,16 @@
     text-align: center;
     padding: 30px 20px;
     background: var(--white);
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid transparent;
 }
 
 .step-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(139, 108, 246, 0.2);
+    border-color: rgba(139, 108, 246, 0.2);
 }
 
 .step-icon {
@@ -483,15 +533,16 @@
     text-align: center;
     padding: 30px 20px;
     background: var(--white);
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid rgba(139, 108, 246, 0.1);
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(139, 108, 246, 0.2);
+    border-color: rgba(139, 108, 246, 0.3);
 }
 
 .feature-icon {

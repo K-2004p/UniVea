@@ -10,11 +10,13 @@
     --white: #FFFFFF;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -29,8 +31,15 @@ body {
    Header / Navbar
 ===================== */
 header {
-    background-color: var(--white);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 nav {
@@ -44,8 +53,13 @@ nav {
 
 /* Logo */
 .nav-logo img {
-    height: 130px; 
+    height: 48px; /* Adjusted logo size for better sticky header */
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+    transform: scale(1.05);
 }
 
 /* Menu (Center) */
@@ -81,15 +95,17 @@ nav {
 .nav-auth {
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
 /* Common auth link style */
 .nav-auth a {
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
     transition: all 0.3s ease;
+    font-size: 0.95rem;
 }
 
 /* Login - normal state (no button) */
@@ -100,19 +116,20 @@ nav {
 
 /* Login - button appears on hover */
 .nav-auth a:first-child:hover {
-    background-color: var(--primary-purple);
-    color: var(--white);
+    color: var(--deep-indigo);
+    transform: translateY(-2px);
 }
 
 /* Register - always button */
 .nav-auth a:last-child {
-    color: var(--primary-purple);
-    background: transparent;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--deep-indigo) 100%);
+    box-shadow: 0 4px 15px rgba(139, 108, 246, 0.3);
 }
 
 .nav-auth a:last-child:hover {
-    background-color: var(--primary-purple);
-    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 108, 246, 0.4);
 }
 
 main {
